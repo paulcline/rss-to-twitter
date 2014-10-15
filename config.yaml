@@ -1,0 +1,9 @@
+database: 'recent.db'
+feed: 'http://some-web-site.com/atom.xml'
+purge_days: 7
+twitter:
+  consumer_key : ''
+  consumer_secret : ''
+  access_token_key : ''
+  access_token_secret : ''
+  
