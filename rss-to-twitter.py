@@ -58,7 +58,7 @@ try:
 
     logging.info("Tweeting \"%s\" | length: %s" % (message, len(message)))
 
-    # twitterApi.PostUpdate(message)
+    twitterApi.PostUpdate(message)
 
     break
 
