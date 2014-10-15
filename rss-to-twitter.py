@@ -1,5 +1,6 @@
 import feedparser
 import logging
+import os
 import sqlite3
 import sys
 import twitter
@@ -9,7 +10,8 @@ logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO, datefm
 
 try:
 
-  config_file = file("config.yaml", 'r')
+  config_path = os.path.join(os.path.dirname(__file__), "config.yaml")
+  config_file = file(config_path, 'r')
   config = yaml.load(config_file)
 
   feed = feedparser.parse(config["feed"])
