@@ -18,7 +18,7 @@ try:
   if feed.bozo == 1:
     logging.debug("Reading \"%s\": %s" % (config["feed"], feed["bozo_exception"]))
 
-  db = sqlite3.connect(config["database"])
+  db = sqlite3.connect(os.path.join(os.path.dirname(__file__), config["database"]))
   
   db.execute("CREATE TABLE IF NOT EXISTS recent (url varchar(255), tweetdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL)")
   db.commit()
